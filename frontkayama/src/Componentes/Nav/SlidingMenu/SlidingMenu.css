@@ -1,0 +1,93 @@
+.menuContainertrue{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    position: fixed;
+    background-color: rgba(247, 223, 9, 0.945);
+    width: 100%;
+    animation-name: slideIn;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    top: 20px;
+    right: 0%;
+    padding: 5px;
+    border: 1px solid darkblue;
+    z-index: -1;
+}
+.menuContainerfalse{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    /* align-items: center; */
+    position: fixed;
+    background-color: rgba(247, 223, 9, 0.945);
+    width: 100%;
+    animation-name: slideOut;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    top: 40px;
+    right: 0px;
+    padding: 5px;
+    z-index: -2;
+
+}
+.navLinkMenu{
+
+    display: flex;
+    background: black;
+    color: yellow;
+    text-decoration: none;
+    padding: 10px;
+    border-top: 3px solid white;
+        
+
+    /* display: 'flex';
+    padding: 5px;
+    text-decoration: none;
+    font-size: large;
+    color: darkblue;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}
+.navLinkMenu.active{
+    background-color: rgb(233, 233, 42);
+    color: darkblue;
+    font-weight: 600;
+}
+
+
+@keyframes slideOut {
+    0%{
+        transform: translate(0px, 0px);
+        
+    }
+    50%{
+        transform: translate(0px, 2px);
+    }
+    100%{
+        transform: translate(0, -150px);
+        
+
+    }
+    
+}
+@keyframes slideIn {
+    0%{
+        transform: translate(0px, -100px);
+        
+        
+    }
+    /* 0%{
+        transform: translate(0px, 0px);
+        
+        
+    } */
+    50%{
+        transform: translate(0px, 20px);
+    }
+    100%{
+        transform: translate(0px);
+
+    }
+    
+}

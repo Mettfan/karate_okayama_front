@@ -6,7 +6,8 @@ function ButtonNav(props) {
         display: 'flex', 
         background: 'gray',
         color: 'yellow',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        
     }
     let options = props.options || defaultOptions
 

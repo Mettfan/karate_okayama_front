@@ -4,7 +4,7 @@ function Login() {
     return ( <>
     
         <div>
-            <ButtonNav to= {'register'} text={'Inscríbete'}></ButtonNav>
+            {/* <ButtonNav to= {'register'} text={'Inscríbete'}></ButtonNav> */}
             
         </div>
     

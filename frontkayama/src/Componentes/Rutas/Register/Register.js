@@ -4,7 +4,7 @@ function Register() {
     return ( <>
     
         <div>
-            <ButtonNav to= {'login'} text={'Iniciar Sesión'}></ButtonNav>
+            {/* <ButtonNav to= {'login'} text={'Iniciar Sesión'}></ButtonNav> */}
 
         </div>
     
