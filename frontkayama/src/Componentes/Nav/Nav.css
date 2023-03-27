@@ -1,0 +1,31 @@
+.navContainer{
+    display: flex;
+    background-color: black;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.navLink{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    
+}
+.navLink.active{
+    color: yellow;
+    filter: drop-shadow(4px 4px 4px blue);
+}
+.navLinks{
+    justify-content: space-between;
+
+
+}
+
+.navLogo{
+    position: relative;
+    height: 15px;
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: scale(5, 5);
+}
