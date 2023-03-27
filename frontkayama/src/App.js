@@ -10,7 +10,7 @@ import Register from './Componentes/Rutas/Register/Register';
 function App() {
   return (
     <div className="App">
-      <Nav/>
+      <Nav />
       <Routes>
         <Route path='/' element={<Landing></Landing>} />
         <Route path='/productos' element={<Catalogo></Catalogo>} />

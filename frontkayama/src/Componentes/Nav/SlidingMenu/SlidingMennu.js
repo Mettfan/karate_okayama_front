@@ -6,12 +6,9 @@ function SlidingMenu(props) {
         menuIsActive: props.menuIsActive,
 
     })
-    function switchMenu(){
-        setState({...state, menuIsActive: !state.menuIsActive})
-        console.log(state);
-    }
+
     return ( <>
-        <div  className={'menuContainer' + String((props?.menuIsActive || state?.menuIsActive)) }>
+        <div className={'menuContainer' + String((props?.menuIsActive || state?.menuIsActive)) }>
            {state.menuIsActive}
             <NavLink className={'navLinkMenu'} to={'/'}>Inicio</NavLink>
             {/* <NavLink className={'navLinkMenu'} to={'/login'}>Inicia Sesión</NavLink> */}

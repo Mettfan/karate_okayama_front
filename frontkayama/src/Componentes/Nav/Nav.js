@@ -5,7 +5,7 @@ import './Nav.css'
 import SlidingMenu from './SlidingMenu/SlidingMennu';
 function Nav() {
     let menuOptions = {
-        display: 'flex'
+        zIndex: -3
     }
     let links = ['productos']
     let [state, setState] = useState({
@@ -33,7 +33,7 @@ function Nav() {
                 <NavLink className={'navLink'} to={'/register'}> Registro </NavLink>
 
             </div>
-            <SlidingMenu menuIsActive = {state.menuIsActive} options = {{...menuOptions}} links = {[...links]}></SlidingMenu>
+            <SlidingMenu options={{...menuOptions}} menuIsActive = {state.menuIsActive} links = {[...links]}></SlidingMenu>
         </div>    
     </>);
 }
