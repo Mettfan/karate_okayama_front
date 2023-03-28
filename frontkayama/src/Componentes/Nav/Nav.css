@@ -4,7 +4,8 @@
     padding: 10px;
     justify-content: space-between;
     align-items: center;
-    z-index: 7;
+    height: 40px;
+    z-index: 0;
 }
 .navLink{
     color: white;
@@ -13,20 +14,20 @@
     
 }
 .navLink.active{
-    color: yellow;
-    filter: drop-shadow(2px 2px 1px blue);
+    color: black;
+    /* filter: drop-shadow(2px 2px 1px blue); */
     border-left: 1px solid white;
     border-right: 1px solid white;
     border-radius: 10px;
-    background-color: rgb(70, 70, 70);
+    background-color: whitesmoke
 }
 .navLink:hover{
     color: rgb(109, 109, 243);
-    filter: drop-shadow(1px 1px 1px yellow);
+    /* filter: drop-shadow(1px 1px 1px yellow); */
 }
 .navLink.active:hover{
-    color: yellow;
-    filter: drop-shadow(2px 2px 1px yellow);
+    color: blue;
+    /* filter: drop-shadow(2px 2px 1px yellow); */
 }
 
 .navLinks{
@@ -43,5 +44,5 @@
     top: 30px;
     left: 50%;
     transform: scale(5, 5);
-    /* z-index: 3; */
+    z-index: 3;
 }

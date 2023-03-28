@@ -1,5 +1,6 @@
 import React from 'react';
 import ButtonNav from '../../Tools/ButtonNav/ButtonNav';
+import LocationDojos from './LocationDojos/LocationDojos';
 function Dojos() {
     const loginButtonOptions = {
         position: 'fixed',
@@ -27,6 +28,7 @@ function Dojos() {
     }
     return ( <>
     <div>
+        <LocationDojos></LocationDojos>
         <ButtonNav options={{...loginButtonOptions}} to= {'login'} text={'Iniciar Sesión'}></ButtonNav>
         <ButtonNav options={{...registerButtonOptions}} to= {'register'} text={'Inscríbete'}></ButtonNav>
     </div>

@@ -1,5 +1,6 @@
 .landingContainer{
-    z-index: -2;
+    position: relative;
+    z-index: -3;
 }
 .plansContainer{
     display: flex;
@@ -16,5 +17,28 @@
     flex-wrap: wrap;
     margin-bottom: 60px;
     position: relative;
-
+    z-index: -3;
+    
+}
+.featuresContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: -3;
+}
+.extrasContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 30px;
+    z-index: -3;
+}
+.firstSectionContainer{
+    background-color: whitesmoke;
+    position: relative;
+    padding: 10px;
+    z-index: -4;
 }

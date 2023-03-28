@@ -1,0 +1,39 @@
+.footerContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+    align-items: center;
+    color: white;
+}
+.credits{
+    position: relative;
+    /* bottom: 20px; */
+    color: white;
+    padding-bottom: 5px;
+
+    
+}
+.socialMediaContainer{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+.socialMediasContainer{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center;
+    align-items: center; */
+
+}
+.socialMediaImage{
+    width: 50px;
+}

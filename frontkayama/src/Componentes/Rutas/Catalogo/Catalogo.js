@@ -1,5 +1,6 @@
 import React from 'react';
 import ButtonNav from '../../Tools/ButtonNav/ButtonNav';
+import Products from './Productos/Products';
 function Catalogo() {
     const loginButtonOptions = {
         position: 'fixed',
@@ -27,6 +28,7 @@ function Catalogo() {
     }
     return ( <>
     <div>
+        <Products></Products>
         <ButtonNav options={{...loginButtonOptions}} to= {'login'} text={'Iniciar Sesión'}></ButtonNav>
         <ButtonNav options={{...registerButtonOptions}} to= {'register'} text={'Inscríbete'}></ButtonNav>
     </div>

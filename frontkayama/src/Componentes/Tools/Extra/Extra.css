@@ -1,0 +1,24 @@
+.extraText{
+    display: flex;
+    color: black;
+    padding-top: 10px;
+    
+}
+.extraImage{
+    width: 220px;
+    border-radius: 5px;
+}
+.extraContainer{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(194, 189, 189);
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

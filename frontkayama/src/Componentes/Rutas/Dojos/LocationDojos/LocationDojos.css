@@ -1,0 +1,137 @@
+.dojoCard{
+    
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(255, 217, 0, 0.562);
+    padding: 10px;
+    width: 60%;
+    border-bottom-right-radius: 20px ;
+    border-top-left-radius: 20px;
+}
+.dojoImg{
+    height: 500px;
+    /* position: inherit; */
+    /* max-height: 400px; */
+}
+.mapsLogo{
+    width: 50px;
+    cursor: pointer;
+    
+}
+.mapsLogo:hover{
+    animation-name: scaleUp;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    z-index: 0;
+}
+.dojosPage{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* justify-content: center;
+    align-items: center; */
+}
+.infoDojos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infoColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.dojoLink{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pageLocationTitle{
+    display: flex;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 80px;
+}
+.infoBottom{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phraseBottom{
+    display: flex;
+    justify-content: center;
+    /* font-family: 'Lucida Handwriting' ; */
+}
+.scheduleContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: red;
+    /* padding: 10px; */
+    width: 110%;
+    height: 100%;
+}
+.dayScheduleContainer{
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
+    height: 100%;
+}
+.hourValueContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px dotted black;
+    height: 100%;
+    background-color: gold;
+    font-weight: 600;
+
+}
+.dayNameContainer{
+    display: flex;
+    background-color: rgb(11, 11, 111);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+}
+.dojoName{
+    background-color: darkblue;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+
+    
+}
+.dojoContacts{
+    display: flex;
+    justify-content: center;
+}
+@keyframes scaleUp {
+    100%{
+        transform: scale(1.1, 1.1);
+    }
+    
+}
+@media (max-width: 1093px) {
+    .scheduleContainer{
+        flex-wrap: wrap;
+    }
+}
