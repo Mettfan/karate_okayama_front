@@ -1,6 +1,7 @@
 import React from 'react';
 import ButtonNav from '../../Tools/ButtonNav/ButtonNav';
 import Products from './Productos/Products';
+import './Catalogo.css'
 function Catalogo() {
     const loginButtonOptions = {
         position: 'fixed',
@@ -27,7 +28,7 @@ function Catalogo() {
 
     }
     return ( <>
-    <div>
+    <div className='catalogContainer'>
         <Products></Products>
         <ButtonNav options={{...loginButtonOptions}} to= {'login'} text={'Iniciar Sesión'}></ButtonNav>
         <ButtonNav options={{...registerButtonOptions}} to= {'register'} text={'Inscríbete'}></ButtonNav>

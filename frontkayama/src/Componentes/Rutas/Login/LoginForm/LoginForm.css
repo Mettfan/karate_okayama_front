@@ -1,0 +1,16 @@
+.loginForm{
+    background-color: whitesmoke;
+    /* position: relative;
+    z-index: 2; */
+    
+}
+.inputGroup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.submitButton:hover{
+    cursor: pointer;
+    background-color: gold;
+}
