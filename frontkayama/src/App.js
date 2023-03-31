@@ -7,6 +7,7 @@ import Dojos from './Componentes/Rutas/Dojos/Dojos';
 import Login from './Componentes/Rutas/Login/Login';
 import Register from './Componentes/Rutas/Register/Register';
 import Footer from './Componentes/Tools/Footer/Footer';
+import UserDetail from './Componentes/Rutas/UserDetail/UserDetail';
 
 function App() {
   return (<>
@@ -19,6 +20,9 @@ function App() {
 
         <Route path='/login' element={<Login></Login>} />
         <Route path='/register' element={<Register></Register>} />
+        
+        <Route path='/user/:id' element={<UserDetail></UserDetail>} />
+        
       </Routes>
         <Footer></Footer>
     </div>
