@@ -9,12 +9,14 @@ function LoginForm() {
     let nav = useNavigate()
     let globalState = useSelector(state => state)
     let cookie = new Cookies()
-    let user = useSelector(state => state.users.user)  || cookie.get('user')
+    let globalUser = useSelector((state) => state.users.user)
+    let user = cookie.get('user')
     useEffect(() => {
-        if(user?.name){
+        if(globalUser?.name){
+            cookie.set('user', globalUser)
             nav('/')
         }
-    }, [user])
+    }, [globalUser])
     let [state, setState ] = useState({
         userInput: '',
         userPass: ''

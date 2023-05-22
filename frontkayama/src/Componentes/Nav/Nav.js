@@ -10,7 +10,7 @@ function Nav() {
     let nav = useNavigate()
     let cookie = new Cookies()
     let userGlobal = useSelector((state) => state.users )
-    let [globalUser, setGlobalUser] = useState(cookie.get('user') )
+    let globalUser = cookie.get('user') 
     // useEffect(()  N     N  NMJKJI
 
 
@@ -58,9 +58,9 @@ function Nav() {
 
             {/* Estos son los links para el registro y logeo */}
             <div className='navLogs'>
-                {userGlobal && <UserThumb options = {{...userThumbOptions}} user = {userGlobal} callback = {userThumbClick}></UserThumb>}
-                {!userGlobal && <NavLink className={'navLink'} to={'/login'}> Login </NavLink>}
-                {!userGlobal && <NavLink className={'navLink'} to={'/register'}> Registro </NavLink>}
+                {globalUser && <UserThumb options = {{...userThumbOptions}} user = {globalUser} callback = {userThumbClick}></UserThumb>}
+                {!globalUser && <NavLink className={'navLink'} to={'/login'}> Login </NavLink>}
+                {/* {!globalUser && <NavLink className={'navLink'} to={'/register'}> Registro </NavLink>} */}
 
             </div>
             <SlidingMenu options={{...menuOptions}} menuIsActive = {state.menuIsActive} links = {[...links]}></SlidingMenu>

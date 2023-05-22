@@ -1,17 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { fetchOneUser } from '../../../features/users/userSlice';
 import Cookies from 'universal-cookie';
+import CrearClase from '../../Tools/CrearClase/CrearClase';
+import { getMyProducts } from '../../../features/products/productSlicetest';
 function UserDetail() {
     let cookie = new Cookies()
     let reduxUser = useSelector(state => state.users.user)
-    let globalUser = reduxUser || cookie.get('user')
+    let globalUser =  cookie.get('user')
+    // let userProducts = useSelector(status => status?.products?.userProducts )
+    let status = useSelector(status => status?.products )
     let nav = useNavigate()
     let dispatch = useDispatch() 
+    useEffect(() => {
+        if(!globalUser){
+            nav('/login')
+        }
+    }, [])
+    // useEffect(()=> {
+    //     if(globalUser?.id){
+    //         dispatch(getMyProducts({userId: globalUser?.id}))
+    //     }
+    // }, [])
     function logout(){
         console.log('removed');
-        cookie.set('user', null)
+        cookie.remove('user')
+        window.location.reload()
         // dispatch(fetchOneUser({}))
         // nav('/')
         
@@ -28,8 +43,20 @@ function UserDetail() {
             <span>
                 <h5>{globalUser?.privileges}</h5>
             </span>
-            <img  src={globalUser?.image}></img>
-
+            <div>
+                <img  src={globalUser?.image}></img>
+                <div className='clasesContainer' >
+                    {JSON.stringify(status)}
+                    {/* {userProducts?.map(product => {
+                        return (<div>
+                            {product?.Producto}
+                        </div>)
+                    })} */}
+                </div>
+            </div>
+            {/* <div>
+                <CrearClase></CrearClase>
+            </div> */}
             <button onClick={() => {logout()}} className='logoutButton'>Cerrar Sesión</button>
 
         </div>
