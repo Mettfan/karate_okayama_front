@@ -8,6 +8,7 @@ import Login from './Componentes/Rutas/Login/Login';
 import Register from './Componentes/Rutas/Register/Register';
 import Footer from './Componentes/Tools/Footer/Footer';
 import UserDetail from './Componentes/Rutas/UserDetail/UserDetail';
+import Informacion from './Componentes/Rutas/Informacion/Informacion';
 
 function App() {
   return (<>
@@ -23,6 +24,7 @@ function App() {
         
         <Route path='/user/:id' element={<UserDetail></UserDetail>} />
         
+        <Route path='/información' element={<Informacion></Informacion>} />
       </Routes>
         <Footer></Footer>
     </div>

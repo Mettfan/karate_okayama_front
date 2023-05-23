@@ -4,6 +4,9 @@ import fbLogo from '../../../Assets/fbLogo.png'
 import instaLogo from '../../../Assets/instaLogo.png'
 import mailPng from '../../../Assets/mailPng.png'
 import phonePng from '../../../Assets/whitePhone.png'
+import Github from '../../../Assets/Github.png'
+import Linkedin from '../../../Assets/Linkedin.png'
+import FAQ from '../../../Assets/FAQ.png'
 import Cookies from 'universal-cookie';
 function Footer() {
     let cookie = new Cookies()
@@ -28,6 +31,7 @@ function Footer() {
 
         <div className='footerContainer'>
             <div className = {'socialMediasContainer'}>
+                <div>{socialMedia('FAQ', FAQ, '/FAQ')}</div>
                 {user?.privileges === 'admin' && fbLogo && socialMedia('Facebook', fbLogo , 'https://www.facebook.com/people/Okayama-Valle-de-Toluca/100028422446883/' )}
                 {user?.privileges === 'admin' && instaLogo && socialMedia('Instagram', instaLogo , 'https://www.instagram.com/okayama_karatedo/?igshid=YmMyMTA2M2Y%3D' )}
                 {user?.privileges === 'admin' && mailPng && socialMedia('Correo', mailPng , 'okayamavalledetoluca@hotmail.com', true )}
@@ -35,7 +39,11 @@ function Footer() {
 
             </div>
             <div className='credits'>
-                Desarrollado por: Cesar Yannick Fullstack Dev
+                <div className='mediaDev'>
+                    <h6>Desarrollador</h6>
+                    <div>{socialMedia('Github', Github, 'https://github.com/Mettfan')}</div>
+                    <div>{socialMedia('LinkedIn', Linkedin, 'https://www.linkedin.com/in/cesar-yannick-fullstack-developer/')}</div>
+                </div>
             </div>
         </div>
 

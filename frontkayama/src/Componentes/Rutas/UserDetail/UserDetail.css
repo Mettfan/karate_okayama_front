@@ -1,0 +1,11 @@
+.userDetailImage{
+    width: 50%;
+}
+.dataContainer{
+    display: flex;
+    flex-direction: column;
+}
+.gradesContainer{
+    display: flex;
+    justify-content: space-evenly;
+}

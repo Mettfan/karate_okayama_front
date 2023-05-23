@@ -64,19 +64,20 @@ function Landing() {
         container: {
             position: 'relative',
             display: 'flex',
+            background: 'red',
             justifyContent: 'center',
             zIndex: -3,
             backgroundColor: 'whitesmoke',
             width: "100%",
-            height: 'auto',
-            objectFit: 'cover',
+            // height: 'auto',
+            // objectFit: 'cover',
         },
         image: {
             display: 'flex',
             zIndex: -3,
             position: 'relative',
             justifyContent: 'center', 
-            widht: '100%',
+            width: '100%',
             borderBottomRightRadius: 50,
             borderBottomLeftRadius: 50
             // height: 'auto'

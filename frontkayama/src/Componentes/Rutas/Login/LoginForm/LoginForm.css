@@ -1,5 +1,10 @@
 .loginForm{
     background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-wrap: wrap;
     /* position: relative;
     z-index: 2; */
     
@@ -7,10 +12,36 @@
 .inputGroup{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
+    padding: 5px;
+    font-size: larger;
 }
+.submitButton{
+    padding: 5px;
+    height: 50PX;
+    /* height: 100%; */
+}
+
 .submitButton:hover{
     cursor: pointer;
     background-color: gold;
+}
+.userInput{
+    padding: 10px;
+}
+.userPass{
+    padding: 10px;
+    
+}
+.inputsContainer{
+    padding: 10px;
+}
+.credits{
+    display: flex;
+    flex-direction: column;
+}
+.mediaDev{
+    display: flex;
+    
 }

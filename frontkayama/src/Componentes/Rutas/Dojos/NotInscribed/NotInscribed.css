@@ -1,0 +1,12 @@
+.gotoRegister:hover{
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+.gotoRegister{
+    padding: 20px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* width: 50%; */
+}

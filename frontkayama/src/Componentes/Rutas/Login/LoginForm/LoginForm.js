@@ -39,17 +39,21 @@ function LoginForm() {
     
         <div>
             <form className='loginForm' onSubmit={(e) => handleOnSubmit(e)}>
-                <div className='inputGroup'> 
-                    <label>Usuario</label>
-                    <input name='userInput' type={'text'} placeholder={'Escriba el Usuario...'} onChange={(e) => handleOnChange(e)}></input>
+                <div className='inputsContainer'>
+                    <div className='inputGroup'> 
+                        <label>Usuario</label>
+                        <input name='userInput' className='userInput' type={'text'} placeholder={'Escriba el Usuario...'} onChange={(e) => handleOnChange(e)}></input>
+                    </div>
+                    <div className='inputGroup'> 
+                        <label>Contraseña</label>
+                        <input name='userPass' className='userPass' type={'password'} placeholder={'Escriba su Contraseña'} onChange={(e) => handleOnChange(e)}></input>
+                    </div>
+
+
                 </div>
-                <div className='inputGroup'> 
-                    <label>Contraseña</label>
-                    <input name='userPass' type={'password'} placeholder={'Escriba su Contraseña'} onChange={(e) => handleOnChange(e)}></input>
-                </div>
-                <input name='submitButton' className='submitButton' type={'submit'} placeholder={'Ingresar'}  ></input>
+                    <input name='submitButton' className='submitButton' type={'submit'} placeholder={'Ingresar'}  ></input>
             </form>
-            {JSON.stringify(globalState)}
+            {JSON.stringify(globalState?.users?.user?.message || globalState?.users?.user.error)}
 
         </div>
     

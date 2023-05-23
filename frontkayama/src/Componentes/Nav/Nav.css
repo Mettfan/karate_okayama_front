@@ -46,3 +46,8 @@
     transform: scale(5, 5);
     z-index: 3;
 }
+@media (max-width: 800px)  {
+    .navLinks{
+        display: none;
+    }    
+}

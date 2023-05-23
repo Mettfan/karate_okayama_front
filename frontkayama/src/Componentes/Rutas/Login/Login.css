@@ -4,6 +4,16 @@
 }
 .loginContainer{
     background-color: whitesmoke;
+    display: flex;
+    height: 80VH;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     /* position: relative;
     z-index: -4; */
+}
+@media (max-width: 800px)  {
+    .loginContainer{
+        flex-direction: column;
+    }
 }
