@@ -1,0 +1,8 @@
+.userCardContainer{
+    background-color: gold;
+    width: 30%;
+    border: solid black 1px;
+}
+.userCardImage{
+    width: 100%;
+}

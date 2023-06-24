@@ -186,8 +186,8 @@ function Landing() {
 
         {/* <Footer/> */}
 
-        <ButtonNav options = {{...sucursalesButtonOptions}} to = {'dojos'} text={'Sucursales'}></ButtonNav>
-        <ButtonNav options = {{...catalogButtonOptions}} to = {'productos'} text={'Catálogo'}></ButtonNav>
+        {/* <ButtonNav options = {{...sucursalesButtonOptions}} to = {'dojos'} text={'Sucursales'}></ButtonNav>
+        <ButtonNav options = {{...catalogButtonOptions}} to = {'productos'} text={'Catálogo'}></ButtonNav> */}
     </div>
     </> );
 }

@@ -26,7 +26,7 @@
     animation-name: slideOut;
     animation-fill-mode: forwards;
     animation-duration: 0.5s;
-    top: 40px;
+    top: 0px;
     right: 0px;
     padding: 5px;
     z-index: -2;

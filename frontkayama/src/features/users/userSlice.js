@@ -5,6 +5,7 @@ export const userSlice = createSlice({
     initialState: {
         loading: false,
         user: [],
+        users: [],
         counter: 0,
         response: '',
         error: ''
@@ -42,6 +43,20 @@ export const userSlice = createSlice({
         builder.addCase(fetchUser.rejected, (state, action) => {
             state.loading = false
             state.user = []
+            state.error = action.error.message
+        })
+////////////////////////////
+        builder.addCase(fetchUsers.pending, state => {
+            state.loading = true
+        })
+        builder.addCase(fetchUsers.fulfilled, (state, action) => {
+            state.loading = false
+            state.users = [...action.payload]
+            state.error = ''
+        })
+        builder.addCase(fetchUsers.rejected, (state, action) => {
+            state.loading = false
+            state.users = []
             state.error = action.error.message
         })
 ////////////////////////////
@@ -87,6 +102,10 @@ const fetchUser = createAsyncThunk('users/fetchUser', ({filter, value, password}
     return axios.get(`http://localhost:3001/users/?filter=${filter}&value=${value}&password=${password}`)
     .then( response => response.data)
 })
+const fetchUsers = createAsyncThunk('users/fetchUsers', () => {
+    return axios.get(`http://localhost:3001/users/`)
+    .then( response => response.data)
+})
 const editProduct = createAsyncThunk('products/editProduct', ({id, findBy, infoUpdated}) => {
     // console.log(value);
     return axios.put(`http://localhost:3001/products/update`, {
@@ -103,4 +122,5 @@ export const {
 // export const productSliceReducer = productSlicetest.reducer
 export const createOneUser = createUser
 export const fetchOneUser = fetchUser //
+export const fetchAllUsers = fetchUsers //
 export const editOneProduct = editProduct

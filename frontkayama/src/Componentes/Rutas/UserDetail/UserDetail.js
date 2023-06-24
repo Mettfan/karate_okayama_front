@@ -48,69 +48,138 @@ function UserDetail() {
     let cintas = [
         {
             kyu: '10',
-            image: decimoKyu
+            image: decimoKyu,
+            color: 'white'
         },
         {
             kyu: '9',
-            image: novenoKyu
+            image: novenoKyu,
+            color: 'white'
         },
         {
             kyu: '8',
-            image: octavoKyu
+            image: octavoKyu,
+            color: 'purple',
+            secondaryColor: 'white'
         },
         {
             kyu: '7',
-            image: septimoKyu
+            image: septimoKyu,
+            color: 'purple'
         },
         {
             kyu: '6',
-            image: sextoKyu
+            image: sextoKyu,
+            color: 'purple',
+            secondaryColor: 'yellow'
         },
         {
             kyu: '5',
-            image: quintoKyu
+            image: quintoKyu,
+            color: 'yellow'
         },
         {
             kyu: '4',
-            image: cuartoKyu
+            image: cuartoKyu,
+            color: 'orange'
         },
         {
             kyu: '3',
-            image: tercerKyu
+            image: tercerKyu,
+            color: 'green'
         },
         {
             kyu: '2',
-            image: segundoKyu
+            image: segundoKyu,
+            color: 'blue'
         },
         {
             kyu: '1',
-            image: primerKyu
+            image: primerKyu,
+            color: 'brown'
         },
+        {
+            dan: '1',
+            image: cintaNegra,
+            color: 'black'
+
+        }
     ]
     let userGrade = cintas?.find(cinta => cinta?.kyu == globalUser?.kyu)
+    function kyuColorSelector(grade){
+        let foundBelt = cintas?.find( cinta => cinta?.kyu === grade )
+        return foundBelt?.color
+    } 
+    function kyuSecondaryColorSelector(grade){
+        let foundBelt = cintas?.find( cinta => cinta?.kyu === grade )
+        return foundBelt?.secondaryColor ?? foundBelt?.color
+    } 
     return ( <>
     
         <div className='userDetailContainer'>
-        <div className='gradesContainer'>
-            <div className='dataContainer'>
-                <span>
-                    <h1>{globalUser?.name}</h1>
-                </span>
-                <span>
-                    <h5>{globalUser?.privileges}</h5>
-                </span>
+        <div className='gradesContainerUserPage'>
+            <div style={{
+                backgroundColor: kyuColorSelector(String(globalUser?.kyu)),
+                width: "100%",
+                height: "100%",
+                opacity: 0.5,
+                borderBottom: 'solid black 3px'
+                
+            }}>-
             </div>
-            <Cinta kyu = {userGrade?.kyu} image={userGrade?.image}  ></Cinta>
+                <div className='dataContainer'>
+                    <span className='userNamePage'>
+                        <h1 >{globalUser?.name}</h1>
+                    </span>
+                    <span>
+                        <h5>{globalUser?.privileges}</h5>
+                    </span>
+                </div>
+                <Cinta kyu = {userGrade?.kyu} image={userGrade?.image}  ></Cinta>
+            <div style={{
+                backgroundColor: kyuSecondaryColorSelector(String(globalUser?.kyu)),
+                width: "100%",
+                height: "100%",
+                opacity: 0.5,
+                borderTop: 'solid black 3px'
+                
+                }}>-
+            </div>
+
            
         </div>
-            <div>
-                <img className='userDetailImage'  src={globalUser?.image}></img>
+        <div className='imageUserPageContainer'>
+            <div style={{
+                backgroundColor: kyuSecondaryColorSelector(String(globalUser?.kyu))
+            }}>
+                <div style={{
+                    backgroundColor: kyuColorSelector(String(globalUser?.kyu)),
+                    width: '100%',
+                    height: '100%',
+                }}>-
+                </div>
+                <div>
+                    <img className='userDetailImage'  src={globalUser?.image}></img>
+
+                </div>
+                {/* <div>
+                    <CrearClase></CrearClase>
+                </div> */}
+                <div style={{
+                    backgroundColor: kyuColorSelector(String(globalUser?.kyu)),
+                    width: '100%',
+                    height: '100%',
+                }}>-
+                </div>
 
             </div>
-            {/* <div>
-                <CrearClase></CrearClase>
-            </div> */}
-            <button onClick={() => {logout()}} className='logoutButton'>Cerrar Sesión</button>
+                <button onClick={() => {logout()}} className='logoutButton'>
+                    <div className='logoutText'>
+                        Cerrar Sesión
+                    </div>
+                </button>
+
+        </div>
 
         </div>
     
