@@ -135,7 +135,7 @@ function UserDetail() {
                         <h5>{globalUser?.privileges}</h5>
                     </span>
                 </div>
-                <Cinta kyu = {userGrade?.kyu} image={userGrade?.image}  ></Cinta>
+                {userGrade.kyu ? <Cinta kyu = {userGrade?.kyu} image={userGrade?.image}  ></Cinta> : 'Validando sus datos...'}
             <div style={{
                 backgroundColor: kyuSecondaryColorSelector(String(globalUser?.kyu)),
                 width: "100%",

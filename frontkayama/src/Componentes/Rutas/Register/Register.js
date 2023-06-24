@@ -18,7 +18,7 @@ function Register() {
     })
     let handleRegisterSubmit = (e) => {
         e.preventDefault && e.preventDefault()
-        dispatch(createOneUser({...user, disabled: true})).then(() => {
+        dispatch(createOneUser({user: {...user, disabled: true}})).then(() => {
             nav('/login')
         } )
 
